@@ -1,58 +1,37 @@
-// *****************//
-// 1. Osnovni termini
-// *****************//
 
-// U programiranju ćemo prvenstveno pisati logiku koja će manipulirati sa nekim podacima.
-// Podatke moramo u aplikacijama negdje spremiti. 
-// Najosnovniji podatkovni tip za spremanje nekih vrijednosti, ćemo zasad nazvati varijable.
-// Za spremanje podataka, koristiti ćemo operatore. 
-// Najčešći operator za dodijeljivanje vrijednosti je znak =
+// DISCLAIME: BITNO JE INICIJALIZIRATI VARIJABLU NA ODREĐENU VRIJEDNOST PRIJE NJENOG KORIŠTENJA.
 
-// *******************************//
-// 2. Definiranje + Inicijalizacija
-// *******************************//
+// ******************
+// 2. Tipovi podataka
+// ******************
 
-// Kod spremanja podataka u neku varijablu, prije moramo napraviti dvije stvari.
-// a) definirati ispravno varijable, pri vrhu skripte.
-// b) prije korištenja te varijable, potrebno joj je dodijeliti vrijednost.
-// Inicijalizacija -> dodijeljivanje određene vrijednosti nečemu -> postavljanje nečega na neku vrijednost.
+// Podaci u programerskom svijetu, a i u stvarnom svijetu, postoje u više vrste.
+// Tri glave kategorije s kojima ćemo mi zasad raditi su: string, boolean i number.
 
-var a; // Definiranje | Definicija varijable
-var b = 2; // Definiranje + inicijalizacija (dodijeljivanje vrijednosti) na određenu vrijednost.
+var ime = "Mario"; // -> string vrijednost je specifična po tome što se dodjeljuje nekoj varijabli pomoću navodnih znakova. 
+var age = 22;
+var isOld = false; // -> imena boolean varijabli se općenito pišu kao pitanja.
 
-console.log("Ispis prije inicijalizacije: ", a);
+// **********************************
+// 3. Tipovi varijabli i blokovi koda
+// **********************************
 
-a = 3; // Inicijaliziranje na određenu vrijednost. 
+    // Tipovi varijabli
 
-console.log("Ispis poslije inicijalizacije: ", a);
+// U JS-u ćemo se zasad raditi s 3 osnovne kategorije varijabli.
+// One su: var, let i const.
 
-// **************************//
-// 3. Tipovi podataka i podaci
-// **************************//
+var clientName = "Mario";
 
-// U programiranju ćemo se susresti s raznim tipovima podataka.
-// Najosnovniji od njih su: number, string i boolean.
+    // Blokovi koda
 
-var ime = "Goran"; // -> string -> bitno ga je navesti između ovih znakova -> ""
-var godine = 28; // -> number
-var isOldEnough = false; // -> boolean -> praksa je da se ime piše kao upitna rečenica.
-
-console.log("Scope #0: ", ime);
-
-// ****************************************//
-// 4. Type of variable declarations & Blocks
-// ****************************************//
-
-// Pod blok koda se mislim sve što je unutar vitičastih zagrada. 
-// Odnosno blokovi koda se odvajaju vitičastim zagradama.
-
-// Postoje 3 standardna načina definiranja varijabli.
-// Mogu se definirati kao var, let i const.
+// Blokovi koda su specifični po tome da se odvajaju sa {} zagradama.
 
 {
-    let ime = 0;
+    let clientName = "Mario_2";
     {
-        console.log("Scope #1: ", ime);
+        {
+            console.log("Drugo ime: ", clientName);
+        }
     }
 }
-
