@@ -1,4 +1,4 @@
-# Mario Instrukcije
+# Goran Instrukcije
 
 ## **Sadržaj**
 
